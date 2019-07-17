@@ -32,14 +32,38 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
 
+    let earlyInventors = inventors.filter(specificInventor => specificInventor.year >= 1500 && specificInventor.year < 1600)
+
+    console.log(earlyInventors);
+
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+
+    // This piece of code here isn't the answer, but it behaves in a very interesting way that I want to solve and think about
+    //nameOfInventor = inventors.map(inventorName => inventorName.first || inventorName.last );
+
+    let nameOfInventor = inventors.map(inventorName => inventorName.first + " " + inventorName.last );
+
+    console.log(nameOfInventor);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
 
+    console.log(inventors.sort());
+
+    // not sure how to make it grab the year, and still have it call that function. I'm going to come back to that one
+
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
+
+
+    simiplifiedInvestor = inventors.reduce((accumulator, currentValue => {
+
+       accumulator = accumulator + (currentValue.passed - currentValue.year);
+
+    }), 0);
+
+    console.log(simiplifiedInvestor);
 
     // 5. Sort the inventors by years lived
 
