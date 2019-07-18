@@ -10,7 +10,7 @@
     // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
 
-    // Some data we can work with
+    // Some data we can work wi1th
 
     const inventors = [
       { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
@@ -49,34 +49,65 @@
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
 
-    console.log(inventors.sort());
+    // The .sort function has two parameters one parameter is the left hand value a and the other version is the right hand value b in a typical comparison
+
+    let sortedInvestorsByAge = inventors.sort((inventor1, inventor2) => {
+   
+      return inventor1.year - inventor2.year;
+
+    });
+
+    console.log(sortedInvestorsByAge);
 
     // not sure how to make it grab the year, and still have it call that function. I'm going to come back to that one
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
 
+    // I have to remember with these functions that they behave functionally! They will return based on
 
-    simiplifiedInvestor = inventors.reduce((accumulator, currentValue => {
 
-       accumulator = accumulator + (currentValue.passed - currentValue.year);
+    let simiplifiedInvestor = inventors.reduce((accumulator, currentValue) => {
 
-    }), 0);
+       return accumulator + (currentValue.passed - currentValue.year);
+
+    }, 0);
 
     console.log(simiplifiedInvestor);
 
     // 5. Sort the inventors by years lived
 
+    // I honestly don't even know what this function is asking. It seems very similiar to the one that we already solved, but perhaps it isn't?
+
+    let yearsLived = inventors.sort((inventorLife1, inventorLife2) => {
+
+      return inventorLife2.year - inventorLife1.year;
+
+    });
+
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+    // I don't understand this one. Do they want me to just create an Object with these key values in it? I'm very copnfused.
+
+    const parisBoulevards =  ["Boulevard de l'Amiral-Bruix", "Boulevard des Capucines", "Boulevard de la Chapelle", 
+    "Boulevard de Clichy", "Boulevard de l'Hôpital", "Boulevard des Italiens", "Boulevard de la Madeleine", "Boulevard de Magenta",
+     "Boulevard de Rochechouart", "Boulevard de Sébastopol", "Boulevard de Strasbourg", "Boulevard de la Zone"];
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    console.log(inventors.sort());
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    data.reduce((accumulator1, currentValue) => {
+
+      
+
+    }, 0);
 
   </script>
 </body>
