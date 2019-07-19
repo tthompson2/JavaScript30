@@ -103,11 +103,38 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-    data.reduce((accumulator1, currentValue) => {
+    carAccumulator = 0;
+    truckAccumulator = 0;
+    bikeAccumulator = 0;
+    walkAccumulator = 0;
+    vanAccumulator = 0;
 
-      
+    let totalTransportationMethods=data.reduce((accumulator1, currentValue) => {
+
+            if(currentValue === 'car')
+            {
+              return carAccumulator++;
+            }
+            else if(currentValue === 'truck')
+            {
+              return truckAccumulator++;
+            }
+            else if(currentValue === 'bike')
+            {
+              return bikeAccumulator++;
+            }
+            else if(currentValue === 'walk')
+            {
+              return walkAccumulator++;
+            }
+            else(currentValue === 'van') 
+            {
+              return vanAccumulator++;
+            }
 
     }, 0);
+
+    console.log(totalTransportationMethods);
 
   </script>
 </body>
